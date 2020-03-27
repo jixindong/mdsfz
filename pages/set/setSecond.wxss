@@ -1,0 +1,14 @@
+/* pages/set/setSecond.wxss */
+.setSecond {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 100rpx;
+  color: #333;
+  font-size: 30rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.setSecond .name {
+  margin-left: 60rpx;
+}

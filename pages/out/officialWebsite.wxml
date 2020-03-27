@@ -1,0 +1,2 @@
+<!--pages/out/officialWebsite.wxml-->
+<web-view src="https://www.madasheng.com"></web-view>

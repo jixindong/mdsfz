@@ -1,0 +1,24 @@
+/* components/search/search.wxss */
+@import "/app.wxss";
+.search{
+  padding: 20rpx;
+  width: 100vw;
+}
+.search form{
+  width: 100%;
+}
+.search .search-box{
+  align-items: center;
+  border: 1rpx solid #ccc;
+}
+.search .search-box text{
+  padding: 10rpx 12rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+.search .search-box .search-input{
+  width: 100%;
+  font-size: 26rpx;
+  color: #666;
+}

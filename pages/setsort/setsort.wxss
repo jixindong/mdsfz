@@ -1,0 +1,56 @@
+/* pages/setsort/setsort.wxss */
+
+.box {
+  padding-bottom: 90rpx;
+}
+
+/* 搜索框 */
+
+.search image {
+  width: 100%;
+  height: 70rpx;
+}
+
+.productSet {
+  padding-bottom: 10rpx;
+  height: 17.6vh;
+}
+
+.productSet .links {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 30rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  color: #eee;
+}
+.productSet .links image {
+  margin: 0 40rpx 0 60rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.productSet .linksBc{
+  background-color: #FFB900;
+}
+.productSet .linksBc2{
+  background-color: #007E37;
+}
+.productSet .linksBc3{
+  background-color: #135798;
+}
+.productSet .linksBc4{
+  background-color: #E7592B;
+}
+.productSet .linksBc5{
+  background-color: #6E6458;
+}
+/* 导航栏 */
+
+navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

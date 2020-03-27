@@ -1,0 +1,96 @@
+/* pages/order/ordernow.wxss */
+
+/* 提示 */
+
+.tip {
+  flex-flow: row wrap;
+  padding: 30rpx 130rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: #666;
+}
+
+/* 预约表单 */
+
+.reservation {
+  flex-flow: column nowrap;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  color: #8b8b8b;
+}
+
+/* 首行信息 左 */
+
+.reservation .leftmsg {
+  flex-flow: column nowrap;
+  width: 30%;
+}
+
+.reservation .leftmsg .inputbox picker {
+  width: 100%;
+}
+
+.reservation .leftmsg .inputbox picker .picker {
+  padding: 0 0 0 20rpx;
+  font-size: 28rpx;
+}
+
+/* 首行信息 右 */
+
+.reservation .rightmsg {
+  flex-flow: column nowrap;
+  margin-left: auto;
+  width: 66%;
+}
+
+/* 种类名称 */
+
+.reservation .kindname {
+  padding: 30rpx 0 10rpx 20rpx;
+  font-size: 26rpx;
+}
+
+/* 输入框 盒子 */
+
+.reservation .inputbox {
+  align-items: center;
+  height: 70rpx;
+  border: 1rpx solid #ccc;
+}
+
+.reservation .inputbox input {
+  flex: 1;
+  padding-right: 20rpx;
+}
+
+/* 字体图标 */
+
+.reservation .inputbox .myicon {
+  padding: 0 20rpx;
+}
+
+.reservation .inputbox .myicon2 {
+  margin-left: auto;
+  padding: 0 20rpx;
+}
+
+/* 留言 */
+
+.reservation .message {
+  padding: 20rpx;
+  width: 100%;
+  height: 240rpx;
+  border: 1rpx solid #ccc;
+}
+
+/* 提交预约 */
+
+.reservation .refer {
+  margin-top: 100rpx;
+  width: 90%;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #eee;
+  background-color: #1a1a1a;
+  border-radius: 0;
+}

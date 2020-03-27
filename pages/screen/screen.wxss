@@ -1,0 +1,115 @@
+/* pages/screen/screen.wxss */
+
+.box {
+  position: relative;
+  padding-bottom: 140rpx;
+}
+
+/* 顶部筛选区 */
+
+.screenbox {
+  flex-flow: column wrap;
+  border-bottom: 1rpx solid #eee;
+}
+
+.screenbox navigator {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 40rpx;
+  width: 100%;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.screenbox navigator .iconfont {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.screenbox .fxk {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10rpx 40rpx;
+}
+
+/*checkbox 整体大小  */
+
+.screenbox .fxk label.checkbox {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  min-width: 50%;
+  height: 60rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.screenbox .fxk checkbox {
+  width: 60rpx;
+}
+
+/*checkbox 选项框大小  */
+
+checkbox .wx-checkbox-input {
+  width: 32rpx;
+  height: 32rpx;
+  border: 4rpx solid #999;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+/*checkbox选中后样式  */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background-color: #999;
+}
+
+/*checkbox选中后图标样式  */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background-color: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+/* 提示 */
+
+.tip {
+  justify-content: center;
+  padding: 30rpx 0;
+  font-style: italic;
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* 底部按钮 */
+
+.footbtnbox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 36rpx 0;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+}
+
+.footbtnbox .footbtn {
+  width: 280rpx;
+  font-size: 26rpx;
+  color: #333;
+  border: 1rpx solid #333;
+  border-radius: 0;
+}
+
+.footbtnbox .footbtn2 {
+  margin-left: -50rpx;
+  color: #fff;
+  background-color: #333;
+}

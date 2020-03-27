@@ -1,0 +1,38 @@
+/* components/navigation/navigation.wxss */
+
+.navigation {
+  flex-flow: row nowrap;
+  padding: 0 40rpx;
+  width: 100vw;
+  background-color: rgb(247, 247, 247);
+}
+
+.navigation .nav {
+  flex-flow: column nowrap;
+  width: 25%;
+}
+
+.navigation .nav .line {
+  border-top: 4rpx solid #1a1a1a;
+}
+
+.navigation .nav .text {
+  display: flex;
+  justify-content: center;
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.navigation .nav .text-active {
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.navigation .divide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.5%;
+  color: #666;
+}

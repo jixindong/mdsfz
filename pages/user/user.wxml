@@ -1,0 +1,57 @@
+<!--pages/user/user.wxml-->
+<view class="box">
+  <!-- 头像区 -->
+  <view class="photozrea">
+    <image src="https://s2.ax1x.com/2020/03/10/8iMpE6.jpg" class="bg"></image>
+    <view class="mask"></view>
+    <view class="photobox">
+      <button class="photo" bindgetuserinfo="getUserInfo" open-type="getUserInfo" wx:if="{{isLogin == false}}">
+        <image src="https://s1.ax1x.com/2020/03/17/8UwKEj.jpg"></image>
+      </button>
+      <image src="{{userInfo.avatarUrl}}" wx:if="{{isLogin == true}}" class="photo"></image>
+      
+      <text wx:if="{{isLogin==false}}">点击头像登录</text>
+      <text wx:if="{{isLogin==true}}">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <!-- 头像区 end -->
+
+  <!-- 链接区 -->
+  <view class="linkbox">
+    <navigator url="/pages/collect/collect" class="link">
+      <text class="iconfont icon-shoucang1"></text>
+      <text class="txt">我的收藏</text>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+  </view>
+  <view class="linkbox">
+    <navigator url="/pages/mynote/mynote" class="link">
+      <text class="iconfont icon-pencil"></text>
+      <text class="txt">我的笔记</text>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+  </view>
+  <view class="linkbox">
+    <navigator url="/pages/out/officialWebsite" class="link">
+      <text class="iconfont icon-prompt"></text>
+      <text class="txt">关于我们</text>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+  </view>
+  <!-- 链接区 end -->
+
+  <!-- 公司信息 -->
+  <view class="corporationInfo">
+    <text>佛山市马大生纺织有限公司</text>
+    <text>Fo Shan Shi Ma Da Sheng Textile CO.,LTD</text>
+    <text>地址：佛山市三水大塘工业园77-2号</text>
+  </view>
+
+  <!-- 退出登录 -->
+  <navigator url="#" class="exit" bindtap="exit" wx:if="{{isLogin == true}}">退出</navigator>
+</view>
+
+<!-- 导航栏 -->
+<view>
+  <navigation currentIndex="{{index}}"></navigation>
+</view>

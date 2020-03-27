@@ -1,0 +1,44 @@
+<!--pages/order/order.wxml-->
+<view class="box">
+  <!-- 大图 -->
+  <view class="bigimg">
+    <image src="/img/logo.png" class="logo"></image>
+    <image src="{{qrcode}}" class="qrcode"></image>
+    <!-- <image src="{{bgImg}}"></image> -->
+    <!-- <swiper interval="5000" autoplay circular>
+      <swiper-item wx:for="{{imgs}}" wx:key="*this">
+        <image src="{{base_url + item}}"></image>
+      </swiper-item>
+    </swiper> -->
+    <image src="https://s1.ax1x.com/2020/03/24/8qCIM9.jpg" class="companyEnter"></image>
+    <view class="companyIntro">
+      <text class="title">马大生纺织有限公司简介</text>
+      <text>佛山市马大生纺织有限公司，是一家集研发、设计、生产和营销牛仔面料于一体的纺织企业，生产过程涵盖了整经、浆染、织布和后整理，公司荣获“全国棉纺行业500强”、“全国牛仔行业10强”的荣誉称号。公司始创于2000年，生产总部坐落在佛山市三水大塘工业园内，营销网点遍布南海平地、中山大涌、广州新塘、浙江台州等牛仔面料集散地，公司生产设备先进、管理规范。
+</text>
+      <text>马大生纺织始终秉承“持续创新，造好品质”的服务宗旨，坚持“做精做强，做牛仔行业的领跑者”的发展目标矢志不渝，以实现“为员工、客户创造最大价值、成就共同梦想”的企业使命来诚信经营。</text>
+      <text>公司地址：佛山三水大塘工业园77-2号。</text>
+    </view>
+  </view>
+  <!-- 大图 end -->
+
+  <!-- 按钮 -->
+  <view class="orderbtnbox">
+    <navigator url="#" class="orderbtn" bindtap="toCall">
+      <text class="iconfont icon-phone"></text>
+      <text>联系电话</text>
+    </navigator>
+
+    <navigator url="/pages/map/map" class="orderbtn orderbtn2">
+      <text class="iconfont icon-site"></text>
+      <text>公司地址</text>
+    </navigator>
+
+    <navigator url="/pages/order/ordernow" class="orderbtn orderbtn3">
+      <text>立即预约</text>
+    </navigator>
+  </view>
+  <!-- 按钮 end -->
+</view>
+
+<!-- 导航栏 -->
+<navigation currentIndex="{{index}}"></navigation>

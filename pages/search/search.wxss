@@ -1,0 +1,54 @@
+/* pages/search/search.wxss */
+
+/* 产品列表 */
+
+.productlist {
+  flex-flow: row wrap;
+  padding-bottom: 110rpx;
+}
+
+.productlist .porductmsg {
+  padding: 30rpx 30rpx 0;
+  width: 50%;
+}
+
+.productlist .porductmsg navigator {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 0 0 10rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #333;
+  background-color: #e6e6e6;
+}
+
+.productlist .porductmsg image {
+  margin: 24rpx 0;
+  width: 180rpx;
+  height: 220rpx;
+}
+
+.productlist .porductmsg .name {
+  max-width: 230rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.productlist .porductmsg .price {
+  max-width: 230rpx;
+  font-size: 20rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 导航栏 */
+
+navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

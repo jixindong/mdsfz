@@ -1,0 +1,20 @@
+<!--pages/mynote/mynote.wxml-->
+<view class="box">
+  <!-- 我的笔记 -->
+  <view class="note" wx:for="{{notes}}" wx:key="*this">
+    <text class="txt" data-text="{{index}}" catchtap="toCheckNote">[{{item.name}}] {{item.remarks}}</text>
+    <view class="note-bottom">
+      <!-- <text>2020/01/02(静态)</text> -->
+
+      <navigator url="#" class="delete" data-index="{{index}}" catchtap="deleteNote">
+        <text class="iconfont icon-delete"></text>
+        <text>删除</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 我的笔记 end -->
+
+  <!-- 添加笔记 -->
+  <!-- <navigator url="/pages/addnote/addnote?userId={{userId}}&id={{id}}" class="addnote">添加笔记</navigator> -->
+  <!-- 添加笔记 end -->
+</view>

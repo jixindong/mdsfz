@@ -1,0 +1,32 @@
+<!--pages/checknote/checknote.wxml-->
+<view class="box">
+  <!-- 查看笔记商品 -->
+  <view class="product">
+    <image src="{{base_url + imgUrl}}" class="img"></image>
+    <view class="txt">
+      <text class="title">{{name}}</text>
+      <text>{{size}}</text>
+      <text>{{intro}}</text>
+    </view>
+  </view>
+  <!-- 查看笔记商品 end -->
+
+  <!-- 笔记 -->
+  <view class="notebox">
+    <textarea class="note" bindinput="getNote" value="{{note}}" placeholder="请输入内容"></textarea>
+    <!-- 标签 -->
+    <view class="tag">
+      <!-- <text class="tag-normal" wx:for="{{tagNames}}" wx:key="*this">{{item}}</text> -->
+      <!-- <text class="iconfont icon-add1 tag-normal tag-add"></text> -->
+    </view>
+    <!-- 标签 end -->
+  </view>
+  <!-- 笔记 end -->
+
+  <!-- 按钮 -->
+  <view class="notebtnbox">
+    <navigator url="#" class="notebtn" bindtap="edit">编辑</navigator>
+    <navigator url="#" class="notebtn notebtn2" bindtap="clear">清空</navigator>
+  </view>
+  <!-- 按钮 end -->
+</view>

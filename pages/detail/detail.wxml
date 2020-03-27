@@ -1,0 +1,168 @@
+<!--pages/detail/detail.wxml-->
+<view class="box">
+  <!-- 分享 -->
+  <!-- 分享按钮 -->
+  <navigator url="#" class="shareBtn" bindtap="shareBtn">
+    <image src="https://s1.ax1x.com/2020/03/20/867KZn.png"></image>
+  </navigator>
+  <!-- 分享按钮 end -->
+
+  <!-- 分享盒子 -->
+  <view class="shareBox" style="display:{{shareBoxFlag}}">
+    <view class="shareContainer">
+      <!-- 遮罩层 -->
+      <view class="mask" catchtap="shareMask"></view>
+
+      <!-- 分享按钮盒子 -->
+      <view class="shareFunction" style="display:{{shareFunctionFlag}}">
+        <button class="shareNow" catchtap="toShareImg">
+          <image src="https://s1.ax1x.com/2020/03/20/86HOje.png"></image>
+          <text>生成分享图</text>
+        </button>
+        <button class="shareNow" open-type="share">
+          <image src="https://s1.ax1x.com/2020/03/20/86bsDH.png"></image>
+          <text>微信好友</text>
+        </button>
+        <navigator url="#" class="shareCancel" catchtap="shareCancel">取消</navigator>
+      </view>
+
+      <!-- 生成分享图 -->
+      <view class="shareImgBox" style="display:{{shareImgBoxFlag}}">
+        <view class="sahreImg">
+          <canvas canvas-id="myCanvas"></canvas>
+        </view>
+
+        <button class="saveImg" catchtap="saveImg">
+          <image src="https://s1.ax1x.com/2020/03/20/8cnagf.png"></image>
+          <text>保存图片</text>
+        </button>
+      </view>
+    </view>
+  </view>
+  <!-- 分享盒子 end -->
+  <!-- 分享 end -->
+
+  <!-- 顶部轮播图 -->
+  <view class="swiper1">
+    <swiper autoplay="true" indicator-dots interval="3000" circular class="swiper-box">
+      <swiper-item wx:for="{{productImg}}" wx:key="*this">
+        <image src="{{base_url + item}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 顶部轮播图 end -->
+
+  <!-- 中部文本 -->
+  <view class="txtbox">
+    <view class="title">
+      <text class="tagname">{{name}}</text>
+    </view>
+
+    <view class="introTitle">产品简述：</view>
+    <text class="intro" selectable>{{detail}}</text>
+    <!-- <view class="subtitle">颜色 Colour</view> -->
+    <!-- <view class="colorshow">
+      <view class="colorbox">
+        <view class="colorball" style="background-color:{{color}}"></view>
+      </view>
+    </view> -->
+  </view>
+  <!-- 中部文本 end -->
+
+  <!-- 底部文本 -->
+  <view class="txtbox2" wx:if="{{mldetail.length != 0}}">
+    <view class="title">面料详情</view>
+
+    <view class="intro" wx:for="{{mldetail}}" wx:key="*this">
+      <text space="nbsp">{{item.name}} ： </text>
+      <text>{{item.value}}</text>
+    </view>
+  </view>
+  <!-- 底部文本 end -->
+
+  <!-- 中部轮播图 -->
+  <!-- <view class="swiper2">
+    <swiper indicator-dots indicator-color="#ccc" indicator-active-color="#1a1a1a" autoplay interval="3000" circular>
+      <swiper-item wx:for="{{metarialImg}}" wx:key="*this">
+        <image src="{{base_url +item}}"></image>
+      </swiper-item>
+    </swiper>
+  </view> -->
+  <!-- 中部轮播图 end -->
+
+  <!-- 面料图片 -->
+  <text class="liningTitle" wx:if="{{metarialImg.length != 0}}">洗水色办</text>
+  <view class="lining" wx:if="{{metarialImg.length != 0}}">
+    <block wx:for="{{metarialImg}}" wx:key="*this">
+      <image data-index="{{index}}" src="{{base_url +item}}" catchtap="metarialImg"></image>
+    </block>
+  </view>
+  <!-- 面料图片 end -->
+
+  <!-- 色谱&标志 -->
+  <view class="productTag">
+    <text class="title" wx:if="{{chromatography.length != 0}}">色办</text>
+    <view class="imgs" wx:if="{{chromatography.length != 0}}">
+      <block wx:for="{{chromatography}}" wx:key="*this">
+        <image data-index="{{index}}" src="{{base_url + item.path}}" catchtap="chromatography"></image>
+      </block>
+    </view>
+
+    <text class="title" wx:if="{{priceTag.length != 0}}">系列特色标签</text>
+    <view class="imgs" wx:if="{{priceTag.length != 0}}">
+      <block wx:for="{{priceTag}}" wx:key="*this">
+        <image data-index="{{index}}" src="{{base_url + item.path}}" catchtap="priceTag"></image>
+      </block>
+    </view>
+  </view>
+  <!-- 色谱&标志 end -->
+
+  <!-- 3D图片 -->
+  <view class="holograph">
+    <text>3D立体图</text>
+    <navigator url="#">
+      <image src="https://s1.ax1x.com/2020/03/25/8vE0nf.png"></image>
+    </navigator>
+  </view>
+  <!-- 3D图片 end -->
+
+  <!-- 相关产品 -->
+  <view class="productlistTitle" wx:if="{{relativeProducts.length != 0}}">面料相关成衣</view>
+  <view class="productlist" wx:if="{{relativeProducts.length != 0}}">
+    <view class="porductmsg" wx:for="{{relativeProducts}}" wx:key="*this">
+      <navigator url="/pages/detail/detail?id={{item[0].id}}&pid={{id}}">
+        <image src="{{base_url + item[0].cover}}" mode="aspectFill"></image>
+        <text class="name">{{item[0].pname}}</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 相关产品 end -->
+
+  <!-- 底部按钮 -->
+  <view class="footbtnbox">
+    <view class="footbtn">
+      <navigator url="/pages/index/index">
+        <text class="iconfont icon-home"></text>
+        <text>首页</text>
+      </navigator>
+    </view>
+    <view class="footbtn footbtn2">
+      <navigator url="/pages/addnote/addnote?userId={{userId}}&id={{id}}">
+        <text class="iconfont icon-pencil"></text>
+        <text>笔记</text>
+      </navigator>
+    </view>
+    <view class="footbtn footbtn3 {{isCollect == true ? 'btnactive':''}}">
+      <navigator url="#" bindtap="collect" wx:if="{{isCollect == false}}">
+        <text class="iconfont icon-shoucang"></text>
+        <text>收藏</text>
+      </navigator>
+
+      <navigator url="#" bindtap="cancelCollect" wx:if="{{isCollect == true}}">
+        <text class="iconfont icon-shoucang"></text>
+        <text>已收藏</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 底部按钮 end -->
+</view>

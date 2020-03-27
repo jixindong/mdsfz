@@ -1,0 +1,77 @@
+/* pages/addnote/addnote.wxss */
+
+.box {
+  padding: 0 20rpx;
+}
+
+/* 添加笔记商品 */
+
+.product {
+  flex-flow: row nowrap;
+  padding: 30rpx 10rpx 50rpx;
+}
+
+.product .img {
+  width: 310rpx;
+  height: 230rpx;
+  border: 2rpx solid #666;
+}
+
+.product .txt {
+  flex-flow: column nowrap;
+}
+
+.product .txt text {
+  padding: 10rpx 0 10rpx 20rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.product .txt .title {
+  padding: 0 0 0 20rpx;
+  font-size: 32rpx;
+  color: #404040;
+}
+
+/* 添加笔记 */
+
+.addnotebox {
+  flex-flow: column nowrap;
+}
+
+.addnotebox .addtag {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+  font-size: 26rpx;
+  color: #999;
+  border: 3rpx solid #ccc;
+}
+
+.addnotebox .addtag .iconfont {
+  font-weight: bold;
+}
+
+.addnotebox .addnote {
+  flex-flow: column nowrap;
+  margin: 30rpx 0 0;
+  padding: 20rpx;
+  border: 3rpx solid #ccc;
+}
+
+.addnotebox .addnote .note {
+  width: 100%;
+  height: 200rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.addnotebox .addnotebtn {
+  margin-top: 200rpx;
+  width: 90%;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #fff;
+  background-color: #333;
+  border-radius: 0;
+}

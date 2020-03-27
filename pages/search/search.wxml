@@ -1,0 +1,19 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索框 -->
+<search bindchange="onChange" bindsearch="onSearch"></search>
+
+<view class="box">
+  <!-- 产品列表 -->
+  <view class="productlist">
+    <view class="porductmsg" wx:for="{{searchMsg}}" wx:key="*this">
+      <navigator url="/pages/detail/detail?id={{item.id}}">
+        <image src="{{base_url + item.img}}"></image>
+        <text class="name">{{item.name}}</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 产品列表 end -->
+</view>
+
+<!-- 导航栏 -->
+<navigation currentIndex="{{index}}"></navigation>

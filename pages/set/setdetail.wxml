@@ -1,0 +1,40 @@
+<!--pages/set/setdetail.wxml-->
+<!-- 搜索框 -->
+<navigator url="/pages/search/search" class="search">
+  <image src="https://s1.ax1x.com/2020/03/17/8UDBPs.png"></image>
+</navigator>
+
+<view class="box">
+  <!-- banner -->
+  <view class="banner">
+    <image src="{{base_url + bannerImg}}"></image>
+    <navigator url="#">{{name}}</navigator>
+  </view>
+  <!-- banner end -->
+
+  <!-- 分类按钮 -->
+  <!-- <view class="sortbtn">
+    <navigator url="/pages/set/setSecond?id={{id}}&name={{name}}">
+      <text>分类</text>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+    <navigator url="/pages/screen/screen">
+      <text>筛选</text>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+  </view> -->
+  <!-- 分类按钮 end -->
+
+  <!-- 产品列表 -->
+  <view class="productlist">
+    <view class="porductmsg" wx:for="{{product}}" wx:key="*this">
+      <navigator url="/pages/detail/detail?id={{item.id}}">
+        <image src="{{base_url + item.path}}" mode="aspectFill"></image>
+        <text class="name">{{item.name}}</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 产品列表 end -->
+</view>
+<!-- 导航栏 -->
+<navigation currentIndex="{{index}}"></navigation>

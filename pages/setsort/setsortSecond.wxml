@@ -1,0 +1,11 @@
+<!--pages/setsort/setsortSecond.wxml-->
+<view class="box">
+  <!-- 搜索框 -->
+  <navigator url="/pages/search/search" class="search">
+    <image src="https://s1.ax1x.com/2020/03/17/8UDBPs.png"></image>
+  </navigator>
+
+  <navigator url="/pages/setsort/setsortdetail?id={{id}}&sortName={{item.name}}&sortSecondId={{item.id}}&productId={{item.id}}" class="sortSecond" wx:for="{{sortSecond}}" wx:key="*this">
+    <text class="name" space="nbsp">-  {{item.name}}</text>
+  </navigator>
+</view>

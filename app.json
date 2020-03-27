@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/set/set",
+    "pages/set/setSecond",
+    "pages/set/setdetail",
+    "pages/setsort/setsort",
+    "pages/setsort/setsortSecond",
+    "pages/setsort/setsortdetail",
+    "pages/detail/detail",
+    "pages/screen/screen",
+    "pages/search/search",
+    "pages/order/order",
+    "pages/order/ordernow",
+    "pages/map/map",
+    "pages/user/user",
+    "pages/collect/collect",
+    "pages/mynote/mynote",
+    "pages/checknote/checknote",
+    "pages/addnote/addnote",
+    "pages/out/officialWebsite",
+    "pages/out/holograph"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "马大生纺织",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请点击确定"
+    }
+  }
+}

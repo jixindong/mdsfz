@@ -1,0 +1,75 @@
+<!--pages/screen/screen.wxml-->
+<view class="box">
+  <form>
+    <!-- 顶部筛选区 -->
+
+    <!-- <view class="screenbox" wx:for="{{arr}}" wx:key="*this">
+      <navigator url="#" bindtap="showCondition" data-index="{{index}}">
+        <text>{{item.name}}</text>
+        <text class="iconfont {{checkeds[index] == true ? 'icon-minus1' : 'icon-add1'}}"></text>
+      </navigator>
+
+      <checkbox-group bindchange="checkboxChange" data-index="{{index}}" class="fxk" wx:if="{{checkeds[index]}}">
+        <label class="checkbox" wx:for="{{item.data}}" wx:for-item="v" wx:key="*this">
+          <checkbox value="{{v.value}}" checked="{{v.checked}}" />
+          <text>{{v.value}}</text>
+        </label>
+      </checkbox-group>
+    </view> -->
+
+    <!-- 成分 -->
+    <view class="screenbox">
+      <navigator url="#" bindtap="showTexture">
+        <text>成分</text>
+        <text class="iconfont {{showTexture == true ? 'icon-minus1' : 'icon-add1'}}"></text>
+      </navigator>
+
+      <checkbox-group bindchange="checkboxChange" class="fxk" wx:if="{{showTexture}}">
+        <label class="checkbox" wx:for="{{texture}}" wx:key="*this">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+          <text>{{item.value}}</text>
+        </label>
+      </checkbox-group>
+    </view>
+
+    <!-- 面料组织 -->
+    <view class="screenbox">
+      <navigator url="#" bindtap="showLining">
+        <text>织法</text>
+        <text class="iconfont {{showLining == true ? 'icon-minus1' : 'icon-add1'}}"></text>
+      </navigator>
+
+      <checkbox-group bindchange="checkboxChange2" class="fxk" wx:if="{{showLining}}">
+        <label class="checkbox" wx:for="{{lining}}" wx:key="*this">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+          <text>{{item.value}}</text>
+        </label>
+      </checkbox-group>
+    </view>
+
+    <!-- 颜色 -->
+    <view class="screenbox">
+      <navigator url="#" bindtap="showColor">
+        <text>颜色</text>
+        <text class="iconfont {{showColor == true ? 'icon-minus1' : 'icon-add1'}}"></text>
+      </navigator>
+
+      <checkbox-group bindchange="checkboxChange3" class="fxk" wx:if="{{showColor}}">
+        <label class="checkbox" wx:for="{{color}}" wx:key="*this">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+          <text>{{item.value}}</text>
+        </label>
+      </checkbox-group>
+    </view>
+    <!-- 提示 -->
+    <view class="tip">您可以一次选择多个选项</view>
+    <!-- 顶部筛选区 end -->
+
+    <!-- 底部按钮 -->
+    <view class="footbtnbox">
+      <button formType="reset" class="footbtn" bindtap="resetScreen">重置筛选</button>
+      <button formType="submit" class="footbtn footbtn2" bindtap="screen">筛选</button>
+    </view>
+    <!-- 底部按钮 end -->
+  </form>
+</view>

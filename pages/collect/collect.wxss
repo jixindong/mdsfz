@@ -1,0 +1,51 @@
+/* pages/collect/collect.wxss */
+
+/* 收藏 */
+
+.collectionbox {
+  flex-flow: column nowrap;
+  padding: 0 30rpx;
+}
+
+.collectionbox .collection {
+  flex-flow: row nowrap;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #eee;
+}
+
+.collectionbox .collection .img {
+  width: 310rpx;
+  height: 230rpx;
+  border: 2rpx solid #666;
+}
+
+.collectionbox .collection .txt {
+  flex-flow: column nowrap;
+}
+
+.collectionbox .collection .txt text {
+  padding: 10rpx 0 10rpx 20rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.collectionbox .collection .txt .title {
+  padding: 0 0 0 20rpx;
+  max-width: 420rpx;
+  color: #404040;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.collectionbox .collection .txt .delete {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.collectionbox .collection .txt .delete text {
+  font-size: 26rpx;
+  color: #333;
+}

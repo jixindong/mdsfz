@@ -1,0 +1,40 @@
+<view class="box">
+  <!-- logo -->
+  <view class="logo">
+    <image src="../../img/logo.png"></image>
+  </view>
+  <!-- logo end -->
+
+  <!-- 商标 -->
+  <!-- <scroll-view class="trademark" scroll-x>
+    <view class="markBox" wx:for="{{trademark}}" wx:key="*this">
+      <image src="{{base_url + item.path}}"></image>
+    </view>
+  </scroll-view> -->
+  <!-- 商标 end -->
+
+  <!-- banner -->
+  <!-- 最新系列 -->
+  <view class="bannerBox">
+    <swiper interval="3000" autoplay circular>
+      <swiper-item wx:for="{{bannerBoxFirst.path}}" wx:key="*this">
+        <image src="{{base_url + item}}"></image>
+      </swiper-item>
+    </swiper>
+    <navigator url="/pages/setsort/setsort">最新系列</navigator>
+  </view>
+
+  <!-- 男装、女装、童装 -->
+  <view class="bannerBox" wx:for="{{bannerBox}}" wx:key="*this">
+    <swiper autoplay="true" interval="3000" circular>
+      <swiper-item wx:for-item="banner" wx:for="{{item.banners}}" wx:key="*this">
+        <image src="{{banner}}"></image>
+      </swiper-item>
+    </swiper>
+    <navigator url="/pages/set/set?id={{item.id}}&name={{item.name}}&banner={{base_url + item.topimg}}">{{item.name}}</navigator>
+  </view>
+  <!-- banner end -->
+</view>
+
+<!-- 导航栏 -->
+<navigation currentIndex="{{index}}"></navigation>

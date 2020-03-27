@@ -1,0 +1,6 @@
+<!--pages/set/setSecond.wxml-->
+<view class="box">
+  <navigator url="/pages/set/setdetail?id={{item.id}}&name={{item.name}}&banner={{item.path}}" class="setSecond" wx:for="{{setSecond}}" wx:key="*this">
+    <text class="name" space="nbsp">-  {{item.name}}</text>
+  </navigator>
+</view>

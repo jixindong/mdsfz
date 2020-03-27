@@ -1,0 +1,9 @@
+<!--components/search/search.wxml-->
+<view class="search">
+  <form>
+    <view class="search-box">
+      <text class="iconfont magnifying" bindtap="search"></text>
+      <input type="text" bindinput="onInput" bindconfirm="search"  placeholder="搜索关键字" class="search-input"></input>
+    </view>
+  </form>
+</view>

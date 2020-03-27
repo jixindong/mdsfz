@@ -1,0 +1,23 @@
+<!--pages/setsort/setsortdetail.wxml-->
+<view class="box">
+  <!-- 轮播图 -->
+  <swiper class="sortDetail" interval="2000" autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:key="*this">
+      <image src="{{base_url + item}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 产品列表 -->
+  <view class="productlist">
+    <view class="porductmsg" wx:for="{{product}}" wx:key="*this">
+      <navigator url="/pages/detail/detail?pid={{id}}&id={{item.id}}">
+        <image src="{{base_url + item.cover}}" mode="aspectFill"></image>
+        <text class="name">{{item.name}}</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 产品列表 end -->
+</view>
+
+<!-- 导航栏 -->
+<navigation currentIndex="{{index}}"></navigation>

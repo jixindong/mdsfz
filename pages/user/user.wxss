@@ -1,0 +1,112 @@
+/* pages/user/user.wxss */
+
+/* 头像区 */
+
+.photozrea {
+  position: relative;
+  height: 320rpx;
+}
+
+.photozrea .bg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 遮罩层 */
+
+.photozrea .mask {
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* 头像框 */
+
+.photozrea .photobox {
+  position: absolute;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 2;
+}
+
+.photozrea .photobox .photo {
+  padding: 0;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.photozrea .photobox .photo image {
+  width: 100%;
+  height: 100%;
+}
+
+.photozrea .photobox text {
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  color: #eee;
+}
+
+/* 链接区 */
+
+.linkbox {
+  padding: 20rpx 20rpx 0;
+}
+
+.linkbox .link {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 20rpx 0;
+  width: 100%;
+  font-size: 32rpx;
+  color: #8e8e8e;
+  border-bottom: 2rpx solid #eee;
+}
+
+.linkbox .link .txt {
+  padding: 0 30rpx;
+  font-size: 28rpx;
+}
+
+.linkbox .link .iconfont {
+  margin-left: 20rpx;
+  font-size: 36rpx;
+}
+
+.linkbox .link .icon-next {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+/* 公司信息 */
+
+.corporationInfo {
+  flex-flow: column nowrap;
+  padding: 30rpx;
+  color: #777;
+  font-size: 24rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.corporationInfo text {
+  padding: 5rpx 0;
+}
+
+/* 退出登录 */
+
+.exit {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100rpx 0 30rpx;
+  width: 320rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  color: #ccc;
+  background-color: #333;
+}

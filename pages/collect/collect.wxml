@@ -1,0 +1,21 @@
+<!--pages/collect/collect.wxml-->
+<view class="box">
+  <!-- 收藏 -->
+  <view class="collectionbox">
+    <view class="collection" wx:for="{{collect}}" wx:key="*this">
+      <image src="{{base_url + item.cover}}" class="img"></image>
+      <view class="txt">
+        <text class="title">{{item.name}}</text>
+        <text>{{item.size}}</text>
+        <text>{{item.detail}}</text>
+        <view class="delete">
+          <navigator url="#" data-index="{{index}}" bindtap="cancelColletc">
+            <text class="iconfont icon-delete"></text>
+            <text>删除</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 收藏 end -->
+</view>

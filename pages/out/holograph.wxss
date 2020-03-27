@@ -1,0 +1,5 @@
+/* pages/out/holograph.wxss */
+image{
+  width: 100vw;
+  height: 100vh;
+}

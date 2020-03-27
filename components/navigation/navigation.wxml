@@ -1,0 +1,21 @@
+<!--components/navigation/navigation.wxml-->
+<view class="navigation">
+  <view class="nav">
+    <view class="line" wx:if="{{currentIndex==1}}"></view>
+    <navigator url="/pages/index/index?index=1" class="text {{currentIndex == 1 ? 'text-active' : ''}}">首页</navigator>
+  </view>
+
+  <text class="divide">/</text>
+
+  <view class="nav">
+    <view class="line" wx:if="{{currentIndex==2}}"></view>
+    <navigator url="/pages/order/order?index=2" class="text {{currentIndex == 2 ? 'text-active' : ''}}">预约</navigator>
+  </view>
+
+  <text class="divide">/</text>
+
+  <view class="nav">
+    <view class="line" wx:if="{{currentIndex==3}}"></view>
+    <navigator url="/pages/user/user?index=3" class="text {{currentIndex == 3 ? 'text-active' : ''}}">我的</navigator>
+  </view>
+</view>
