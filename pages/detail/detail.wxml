@@ -120,7 +120,7 @@
   <!-- 3D图片 -->
   <view class="holograph">
     <text>3D立体图</text>
-    <navigator url="#">
+    <navigator open-type="redirect" url="#">
       <image src="https://s1.ax1x.com/2020/03/25/8vE0nf.png"></image>
     </navigator>
   </view>
@@ -130,7 +130,7 @@
   <view class="productlistTitle" wx:if="{{relativeProducts.length != 0}}">面料相关成衣</view>
   <view class="productlist" wx:if="{{relativeProducts.length != 0}}">
     <view class="porductmsg" wx:for="{{relativeProducts}}" wx:key="*this">
-      <navigator url="/pages/detail/detail?id={{item[0].id}}&pid={{id}}">
+      <navigator open-type="redirect" url="/pages/detail/detail?id={{item[0].id}}&pid={{id}}">
         <image src="{{base_url + item[0].cover}}" mode="aspectFill"></image>
         <text class="name">{{item[0].pname}}</text>
       </navigator>
@@ -141,13 +141,13 @@
   <!-- 底部按钮 -->
   <view class="footbtnbox">
     <view class="footbtn">
-      <navigator url="/pages/index/index">
+      <navigator open-type="reLaunch" url="/pages/index/index">
         <text class="iconfont icon-home"></text>
         <text>首页</text>
       </navigator>
     </view>
     <view class="footbtn footbtn2">
-      <navigator url="/pages/addnote/addnote?userId={{userId}}&id={{id}}">
+      <navigator open-type="reLaunch" url="/pages/addnote/addnote?userId={{userId}}&id={{id}}">
         <text class="iconfont icon-pencil"></text>
         <text>笔记</text>
       </navigator>

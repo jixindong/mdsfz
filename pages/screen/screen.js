@@ -387,7 +387,7 @@ Page({
           title: '已筛选',
           duration: 1000
         })
-        wx.navigateTo({
+        wx.redirectTo({
           url: '/pages/set/set?type=search&id=' + that.data.id + '&name=' + that.data.name
         })
       }

@@ -72,7 +72,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    const pages = getCurrentPages(); //获取当前页面栈
+    console.log(pages);
   },
 
   /**

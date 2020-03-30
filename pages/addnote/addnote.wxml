@@ -5,7 +5,6 @@
     <image src="{{base_url + imgUrl}}" class="img" mode="aspectFill"></image>
     <view class="txt">
       <text class="title">{{name}}</text>
-      <!-- <text>货号：{{size}}</text> -->
       <text>{{intro}}</text>
     </view>
   </view>

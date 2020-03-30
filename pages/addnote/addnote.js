@@ -54,7 +54,7 @@ Page({
         icon: 'none',
         duration: 1000,
         complete() {
-          wx.navigateTo({
+          wx.redirectTo({
             url: '/pages/user/user',
           })
         }

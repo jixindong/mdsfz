@@ -129,7 +129,7 @@ Page({
           method: 'post',
           data: {
             code,
-            nickname:that.data.userInfo.nickName,
+            nickname: that.data.userInfo.nickName,
             gender: that.data.userInfo.gender,
             country: that.data.userInfo.country,
             province: that.data.userInfo.province,

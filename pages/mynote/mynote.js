@@ -104,7 +104,7 @@ Page({
     const that = this;
     const index = e.currentTarget.dataset.text;
 
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/checknote/checknote?id=' + that.data.notes[index].id + '&userId=' + that.data.userId
     })
   },

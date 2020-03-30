@@ -1,6 +1,6 @@
 <!--pages/set/setdetail.wxml-->
 <!-- 搜索框 -->
-<navigator url="/pages/search/search" class="search">
+<navigator open-type="redirect" url="/pages/search/search" class="search">
   <image src="https://s1.ax1x.com/2020/03/17/8UDBPs.png"></image>
 </navigator>
 
@@ -28,7 +28,7 @@
   <!-- 产品列表 -->
   <view class="productlist">
     <view class="porductmsg" wx:for="{{product}}" wx:key="*this">
-      <navigator url="/pages/detail/detail?id={{item.id}}">
+      <navigator open-type="redirect" url="/pages/detail/detail?id={{item.id}}">
         <image src="{{base_url + item.path}}" mode="aspectFill"></image>
         <text class="name">{{item.name}}</text>
       </navigator>

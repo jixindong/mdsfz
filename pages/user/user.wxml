@@ -9,7 +9,7 @@
         <image src="https://s1.ax1x.com/2020/03/17/8UwKEj.jpg"></image>
       </button>
       <image src="{{userInfo.avatarUrl}}" wx:if="{{isLogin == true}}" class="photo"></image>
-      
+
       <text wx:if="{{isLogin==false}}">点击头像登录</text>
       <text wx:if="{{isLogin==true}}">{{userInfo.nickName}}</text>
     </view>
@@ -32,7 +32,7 @@
     </navigator>
   </view>
   <view class="linkbox">
-    <navigator url="/pages/out/officialWebsite" class="link">
+    <navigator open-type="redirect" url="/pages/out/officialWebsite" class="link">
       <text class="iconfont icon-prompt"></text>
       <text class="txt">关于我们</text>
       <text class="iconfont icon-next"></text>

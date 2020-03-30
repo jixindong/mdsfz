@@ -10,7 +10,7 @@
   <!-- 产品列表 -->
   <view class="productlist">
     <view class="porductmsg" wx:for="{{product}}" wx:key="*this">
-      <navigator url="/pages/detail/detail?pid={{id}}&id={{item.id}}">
+      <navigator open-type="redirect" url="/pages/detail/detail?pid={{id}}&id={{item.id}}">
         <image src="{{base_url + item.cover}}" mode="aspectFill"></image>
         <text class="name">{{item.name}}</text>
       </navigator>
