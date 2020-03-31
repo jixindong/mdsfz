@@ -58,7 +58,7 @@
       <text class="tagname">{{name}}</text>
     </view>
 
-    <view class="introTitle">产品简述：</view>
+    <view class="introTitle">主题简述：</view>
     <text class="intro" selectable>{{detail}}</text>
     <!-- <view class="subtitle">颜色 Colour</view> -->
     <!-- <view class="colorshow">
@@ -127,7 +127,7 @@
   <!-- 3D图片 end -->
 
   <!-- 相关产品 -->
-  <view class="productlistTitle" wx:if="{{relativeProducts.length != 0}}">面料相关成衣</view>
+  <view class="productlistTitle" wx:if="{{relativeProducts.length != 0}}">面料相关产品</view>
   <view class="productlist" wx:if="{{relativeProducts.length != 0}}">
     <view class="porductmsg" wx:for="{{relativeProducts}}" wx:key="*this">
       <navigator open-type="redirect" url="/pages/detail/detail?id={{item[0].id}}&pid={{id}}">
@@ -147,7 +147,7 @@
       </navigator>
     </view>
     <view class="footbtn footbtn2">
-      <navigator open-type="reLaunch" url="/pages/addnote/addnote?userId={{userId}}&id={{id}}">
+      <navigator url="/pages/addnote/addnote?userId={{userId}}&id={{id}}">
         <text class="iconfont icon-pencil"></text>
         <text>笔记</text>
       </navigator>
