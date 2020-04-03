@@ -118,12 +118,12 @@
   <!-- 色谱&标志 end -->
 
   <!-- 3D图片 -->
-  <view class="holograph">
+  <!-- <view class="holograph">
     <text>3D立体图</text>
     <navigator open-type="redirect" url="#">
       <image src="https://s1.ax1x.com/2020/03/25/8vE0nf.png"></image>
     </navigator>
-  </view>
+  </view> -->
   <!-- 3D图片 end -->
 
   <!-- 相关产品 -->

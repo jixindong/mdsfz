@@ -11,7 +11,7 @@ Page({
     showColor: false, //颜色
     texture: [{
         id: 1,
-        value: '全棉'
+        value: '100%棉'
       },
       {
         id: 2,
