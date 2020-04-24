@@ -9,7 +9,6 @@ Page({
   data: {
     index: 2,
     imgs: [],
-    qrcode: 'https://s1.ax1x.com/2020/03/25/8jYgHJ.jpg',
     phoneNumber: '0757-87273338',
     base_url: app.globalData.base_url,
   },

@@ -3,14 +3,14 @@
   <!-- 大图 -->
   <view class="bigimg">
     <image src="/img/logo.png" class="logo"></image>
-    <image src="{{qrcode}}" class="qrcode"></image>
+    <image src="/img/QRcode.jpg" class="qrcode"></image>
     <!-- <image src="{{bgImg}}"></image> -->
     <!-- <swiper interval="5000" autoplay circular>
       <swiper-item wx:for="{{imgs}}" wx:key="*this">
         <image src="{{base_url + item}}"></image>
       </swiper-item>
     </swiper> -->
-    <image src="https://s1.ax1x.com/2020/03/24/8qCIM9.jpg" class="companyEnter"></image>
+    <image src="https://s1.ax1x.com/2020/04/24/JBxzxx.jpg" class="companyEnter"></image>
     <view class="companyIntro">
       <text class="title">马大生纺织有限公司简介</text>
       <text>佛山市马大生纺织有限公司，是一家集研发、设计、生产和营销牛仔面料于一体的纺织企业，生产过程涵盖了整经、浆染、织布和后整理，公司荣获“全国棉纺行业500强”、“全国牛仔行业10强”的荣誉称号。公司始创于2000年，生产总部坐落在佛山市三水大塘工业园内，营销网点遍布南海平地、中山大涌、广州新塘、浙江台州等牛仔面料集散地，公司生产设备先进、管理规范。

@@ -19,6 +19,7 @@ Page({
     metarialImg: [], //产品材质图片
     chromatography: [], //水洗色谱
     priceTag: [], //特色标签
+    dImg: '', //3D立体图
     isCollect: false, //是否被收藏
     shareBoxFlag: "none", //分享盒子
     shareFunctionFlag: "flex", //分享按钮盒子
@@ -29,7 +30,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(e) {
+  onLoad: function (e) {
     const that = this;
     const userid = wx.getStorageSync('userid');
     const userInfo = wx.getStorageSync('userInfo');
@@ -47,7 +48,8 @@ Page({
         id: that.data.id //服务器根据此id返回对应数据
       },
       success(res) {
-        console.log(res.data)
+        console.log(res.data);
+
         if (res.data.detail) { //产品描述去除换行
           res.data.detail = res.data.detail.replace(/\n/g, '')
         }
@@ -63,7 +65,10 @@ Page({
           mldetail: res.data.mldetail, //面料详情
           chromatography: res.data.water, //水洗色谱
           priceTag: res.data.tags, //特色标签
+          dImg: res.data.dimg //3D立体图
         })
+
+        wx.setStorageSync('dImg', res.data.dimg) //放入缓存 3D立体图
 
         wx.setNavigationBarTitle({ //设置标题
           title: that.data.name
@@ -125,64 +130,64 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
-  shareBtn: function() { //分享按钮
+  shareBtn: function () { //分享按钮
     this.setData({
       shareBoxFlag: "block"
     })
   },
-  shareMask: function() { //分享遮罩
+  shareMask: function () { //分享遮罩
     this.setData({
       shareBoxFlag: "none",
       shareFunctionFlag: "flex",
       shareImgBoxFlag: "none"
     })
   },
-  shareCancel: function() { //分享取消
+  shareCancel: function () { //分享取消
     this.setData({
       shareBoxFlag: "none"
     })
@@ -192,7 +197,7 @@ Page({
       icon: 'none'
     })
   },
-  toShareImg: function() { //生成分享图
+  toShareImg: function () { //生成分享图
     const that = this;
 
     wx.request({
@@ -212,7 +217,7 @@ Page({
         context.setFillStyle
         wx.getImageInfo({
           src: that.data.base_url + that.data.productImg[0],
-          success: function(res) {
+          success: function (res) {
             context.drawImage(res.path, 50 * remX, 80 * remY, 150, 180)
             context.setFillStyle('#000')
             context.setFontSize(12)
@@ -221,7 +226,7 @@ Page({
             context.stroke()
             wx.getImageInfo({
               src: that.data.base_url + result.data.path,
-              success: function(res) {
+              success: function (res) {
                 context.drawImage(res.path, 90 * remX, 390 * remY, 70, 70)
                 context.draw()
               }
@@ -236,14 +241,14 @@ Page({
       shareImgBoxFlag: "flex"
     })
   },
-  saveImg: function() { //保存图片
+  saveImg: function () { //保存图片
     const that = this;
 
-    setTimeout(function() {
+    setTimeout(function () {
       wx.canvasToTempFilePath({
         canvasId: 'myCanvas',
         fileType: 'jpg',
-        success: function(res) {
+        success: function (res) {
           wx.saveImageToPhotosAlbum({
             filePath: res.tempFilePath,
             success() {
@@ -269,7 +274,7 @@ Page({
       })
     }, 200)
   },
-  metarialImg: function(e) { //查看面料
+  metarialImg: function (e) { //查看面料
     const that = this;
     const index = e.currentTarget.dataset.index;
     const imgUrl = that.data.metarialImg;
@@ -283,7 +288,7 @@ Page({
       current: urls[index],
     })
   },
-  chromatography: function(e) { //查看水洗色谱
+  chromatography: function (e) { //查看水洗色谱
     const that = this;
     const index = e.currentTarget.dataset.index;
     const imgUrl = that.data.chromatography;
@@ -300,7 +305,7 @@ Page({
       current: urls[index],
     })
   },
-  priceTag: function(e) { //查看系列特色标签
+  priceTag: function (e) { //查看系列特色标签
     const that = this;
     const index = e.currentTarget.dataset.index;
     const imgUrl = that.data.priceTag;
@@ -315,7 +320,7 @@ Page({
       current: urls[index]
     })
   },
-  collect: function(e) { //收藏
+  collect: function (e) { //收藏
     const that = this;
     const userInfo = wx.getStorageSync('userInfo');
 
@@ -348,7 +353,7 @@ Page({
       })
     }
   },
-  cancelCollect: function() { //取消收藏
+  cancelCollect: function () { //取消收藏
     const that = this;
 
     wx.request({

@@ -1,2 +1,2 @@
 <!--pages/out/holograph.wxml-->
-<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585141547914&di=d81d645084290ecac6e352c44575d44e&imgtype=0&src=http%3A%2F%2Ft9.baidu.com%2Fit%2Fu%3D4169540006%2C4220376401%26fm%3D79%26app%3D86%26f%3DJPEG%3Fw%3D1000%26h%3D1500"></image>
+<web-view src="{{dImg}}"></web-view>

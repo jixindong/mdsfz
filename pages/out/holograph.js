@@ -5,14 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    dImg: '' //3D图片网址
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function () {
+    let dImg = wx.getStorageSync('dImg');
 
+    console.log('3D图片网址', dImg);
+
+    this.setData({
+      dImg
+    })
   },
 
   /**
