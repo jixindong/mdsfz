@@ -6,7 +6,7 @@
   </navigator>
 
   <view class="productSet" wx:for="{{setSort}}" wx:key="*this">
-    <navigator data-index="{{index}}" url="/pages/setsort/setsortSecond?id={{item.id}}&name={{item.name}}" class="links {{index%5==0?'linksBc':''}} {{index%5==1?'linksBc2':''}} {{index%5==2?'linksBc3':''}} {{index%5==3?'linksBc4':''}} {{index%5==4?'linksBc5':''}}">
+    <navigator data-index="{{index}}" url="/pages/setsort/setsortSecond?id={{item.id}}&name={{item.name}}" class="links {{index%5==0?'linksBc5':''}} {{index%5==1?'linksBc2':''}} {{index%5==2?'linksBc3':''}} {{index%5==3?'linksBc4':''}} {{index%5==4?'linksBc':''}}">
       <image src="{{base_url + item.banner}}"></image>
       <text>{{item.name}}</text>
     </navigator>
